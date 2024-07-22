@@ -1,3 +1,12 @@
 * {
   font-family: Consolas;
 }
+
+.commit_list * {
+  margin:5px;
+}
+
+.commit_list div * {
+  background-color: yellow;
+
+}
