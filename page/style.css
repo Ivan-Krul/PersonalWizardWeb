@@ -2,6 +2,18 @@
   font-family: Consolas;
 }
 
+body {
+  color: white;
+  background-color: #21212b;
+}
+
+a {
+  color: white;
+}
+a:visited {
+  color: #808080;
+}
+
 .commit_list * {
   margin:5px;
 }
