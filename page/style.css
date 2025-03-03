@@ -22,3 +22,8 @@ a:visited {
   background-color: yellow;
 
 }
+
+img {
+  padding: 1ch;
+  max-width: 100%;
+}
