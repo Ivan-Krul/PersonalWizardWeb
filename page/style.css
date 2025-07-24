@@ -1,14 +1,20 @@
+:root {
+  --text: #ffffff;
+  --bkgd: #21212b;
+  --pads: 10px;
+}
+
 * {
   font-family: Consolas;
 }
 
 body {
-  color: white;
-  background-color: #21212b;
+  color: var(--text);
+  background-color: var(--bkgd);
 }
 
 a {
-  color: white;
+  color: var(--text);
 }
 a:visited {
   color: #808080;
@@ -25,5 +31,80 @@ a:visited {
 
 img {
   padding: 1ch;
-  max-width: 100%;
 }
+
+.side_entry {
+  padding: var(--pads);
+  border-bottom: 5px solid var(--text);
+  border-left: 5px dashed var(--text);
+  border-right: 5px dashed var(--text);
+}
+
+@media screen and (min-aspect-ratio: 1.2/1) {
+  img {
+    max-width: 100%;
+  }
+  
+  .global_container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.left {
+  margin-right: 10px;
+}
+
+@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 900px) or (max-height: 800px)) {
+  img {
+    max-width: calc(100vw - (var(--pads) * 4));
+  }
+  
+  .left {
+    min-width: calc(100% - (var(--pads) * 2));
+  }
+}
+
+@media screen and (min-aspect-ratio: 1.2/1) {
+  .left {
+    min-width: 200px;
+  }
+}
+
+.high_title {
+  margin-top: 0px;
+}
+
+.post_window {
+  background-color: var(--bkgd);
+  border: 5px solid var(--text);
+  padding-bottom: var(--pads);
+  padding-left: var(--pads);
+  padding-right: var(--pads);
+  margin: 10px;
+  min-width: 100px;
+  min-height: 100px;
+  
+  height: 40vh;
+  
+  
+}
+
+.post_iframe {
+  border: none;
+  height: calc(100% - 50px);
+  width: 100%;
+}
+
+@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 900px) or (max-height: 800px)) {
+  .post_window {
+    width: calc(100% - (var(--pads) * 6));
+  }
+}
+
+@media screen and (min-aspect-ratio: 1.2/1) {
+  .post_window {
+    width: 40vw;
+  }
+}
+
