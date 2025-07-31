@@ -1,0 +1,51 @@
+:root {
+  --text: #ffffff;
+  --bkgd: #21212b;
+  --pads: 10px;
+  --mrgs: 10px;
+  --brds: 5px;
+  --default-body-margin: 5px;
+  
+  --main-border-c: #3ec4b0;
+  --main-bkgd-c: rgba(62, 196, 176, 0.2);
+  --main-border-attachment: #3ec4b0;/*#ead248;*/
+  
+  --abot-border-c: #3ec4b0;
+  --abot-bkgd-c: rgba(62, 196, 176, 0.2);
+  --abot-border-attachment: #3ec4b0;
+  
+  --side-entry-hover-c: rgba(255,255,255,0.2);
+  --img-padding: 1ch;
+  --left-side-min-s: 200px;
+  --right-side-min-s: 300px;
+  --calc-inside-main-s: calc((var(--default-body-margin) + (var(--brds) * 2) + var(--img-padding) + var(--pads)) * 2);
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("./fonts/Rubik-Regular.ttf");
+}
+
+* {
+  font-family: "Rubik";
+}
+
+.regular_link {
+  color: var(--text);
+}
+
+.regular_link:visited {
+  color: #808080;
+}
+
+img {
+  padding: var(--img-padding);
+}
+
+.buttoned_link {
+  color: var(--text);
+}
+
+.buttoned_link:visited {
+  color: var(--text);
+}

@@ -1,23 +1,4 @@
-:root {
-  --text: #ffffff;
-  --bkgd: #21212b;
-  --pads: 10px;
-  --mrgs: 10px;
-  --brds: 5px;
-  --default-body-margin: 5px;
-  --main-border-c: #3ec4b0;
-  --main-bkgd-c: rgba(62, 196, 176, 0.2);
-  --main-border-attachment: #3ec4b0;/*#ead248;*/
-  --side-entry-hover-c: rgba(255,255,255,0.2);
-  --img-padding: 1ch;
-  --left-side-min-s: 200px;
-  --right-side-min-s: 300px;
-  --calc-inside-main-s: calc((var(--default-body-margin) + (var(--brds) * 2) + var(--img-padding) + var(--pads)) * 2);
-}
-
-* {
-  font-family: Consolas;
-}
+@import url("base.css");
 
 body {
   color: var(--text);
@@ -25,12 +6,10 @@ body {
   margin: var(--default-body-margin);
 }
 
-.regular_link {
-  color: var(--text);
-}
-
-.regular_link:visited {
-  color: #808080;
+.main {
+  background-color: var(--main-bkgd-c);
+  border: var(--brds) dashed var(--main-border-c);
+  padding: var(--pads);
 }
 
 .commit_list * {
@@ -40,10 +19,6 @@ body {
 .commit_list div * {
   background-color: yellow;
 
-}
-
-img {
-  padding: var(--img-padding);
 }
 
 .side_entry {
@@ -73,19 +48,13 @@ img {
   margin-top: var(--mrgs);
 }
 
-.main {
-  background-color: var(--main-bkgd-c);
-  border: var(--brds) dashed var(--main-border-c);
-  padding: var(--pads);
-}
-
 .attachment {
   border: var(--brds) dotted var(--main-border-attachment);
 }
 
 .img_in_main {}
 
-@media screen and (min-aspect-ratio: 1.2/1) {
+@media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   img {
     max-width: 100%;
   }
@@ -100,7 +69,7 @@ img {
   }
 }
 
-@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 900px) or (max-height: 800px)) {
+@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   .img_in_main {
     max-width: calc(100vw - var(--calc-inside-main-s));
   }
@@ -117,7 +86,8 @@ img {
   
 }
 
-@media screen and (min-aspect-ratio: 1.2/1) {
+
+@media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   .left {
     min-width: var(--left-side-min-s);
     margin-right: var(--mrgs);
@@ -154,13 +124,13 @@ img {
   width: 100%;
 }
 
-@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 900px) or (max-height: 800px)) {
+@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   .post_window {
     max-width: calc(100vw - var(--calc-inside-main-s));
   }
 }
 
-@media screen and (min-aspect-ratio: 1.2/1) {
+@media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   .post_window {
     width: min(50vw, calc(100vw - (var(--calc-inside-main-s) + (var(--mrgs) * 2) + var(--left-side-min-s) + var(--right-side-min-s)) - 2px));
   }
