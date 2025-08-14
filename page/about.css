@@ -1,0 +1,85 @@
+@import url("base.css");
+
+body {
+  color: var(--text);
+  background-color: var(--bkgd-about);
+}
+
+.img_in_tabl {
+  padding: 0;
+  padding-left: var(--pads);
+  padding-right: var(--pads);
+}
+
+.img_in_menu_bar {
+  image-rendering: pixelated;
+}
+
+.img_in_menu_bar:hover {
+  filter: invert(100%);
+}
+
+.main {
+  background-color: var(--abot-bkgd-c);
+  border: var(--brds) dashed var(--abot-border-c);
+  padding: var(--pads);
+}
+
+.attachment {
+  border: var(--brds) dotted var(--abot-border-attachment);
+}
+
+.main * {
+  /*border: 5px solid black;*/
+}
+
+.gamelib_window {
+  padding: var(--pads);
+}
+
+.gamelib_table {
+  margin-top: var(--mrgs);
+  background-color: rgba(0,0,0,0.8);
+}
+
+.gamelib_table tr td {
+  border: var(--brds) dashed black;
+}
+
+.gamelib_table tr td:hover {
+  border: var(--brds) dashed white;
+}
+
+.current_projects {
+  padding: var(--pads);
+}
+
+.about_window tbody tr td table tbody tr td p {
+  margin-left: var(--pads);
+  margin-right: var(--pads);
+}
+
+@media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
+  .gamelib_window {
+    width: 201px;
+  }
+}
+
+@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
+  .about_window tbody tr td table tbody tr td {
+    display: block;
+  }
+  
+  .img_in_tabl {
+    width: min(50vw, 100%);
+  }
+  
+  .window_stacked {
+    width: min(100%, calc(100vw - 2 * (var(--default-body-margin) + var(--brds) + var(--pads))))
+  }
+  
+  .icons {
+    image-rendering: pixelated;
+    width: min(100%, calc(100% - (var(--default-body-margin) + var(--brds) + var(--pads))))
+  }
+}

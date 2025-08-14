@@ -1,6 +1,8 @@
 :root {
   --text: #ffffff;
-  --bkgd: #21212b;
+  --bkgd-main: #21212b;
+  --bkgd-about: #1a5f6a;
+  --bkgd-contc: #f4b461;
   --pads: 10px;
   --mrgs: 10px;
   --brds: 5px;

@@ -2,7 +2,7 @@
 
 body {
   color: var(--text);
-  background-color: var(--bkgd);
+  background-color: var(--bkgd-main);
   margin: var(--default-body-margin);
 }
 
