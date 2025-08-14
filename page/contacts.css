@@ -82,8 +82,4 @@ body {
   .window_stacked {
     width: min(100%, calc(100vw - 2 * (var(--default-body-margin) + var(--brds) + var(--pads))))
   }
-  
-  .icons {
-    width: min(100%, calc(100% - (var(--default-body-margin) + var(--brds) + var(--pads))))
-  }
 }
