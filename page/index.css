@@ -2,7 +2,11 @@
 
 body {
   color: var(--text);
-  background-color: var(--bkgd-main);
+  background-image: url("./image/bg.gif");
+  background-size: cover;
+  background-position:center;
+  background-rendering: pixelated;
+  /*background-color: var(--bkgd-main);*/
   margin: var(--default-body-margin);
 }
 
@@ -26,6 +30,7 @@ body {
   border-bottom: var(--brds) solid var(--text);
   border-left: var(--brds) dashed var(--text);
   border-right: var(--brds) dashed var(--text);
+  background-color: var(--bkgd-main)
 }
 
 .side_link_entry {
@@ -134,5 +139,9 @@ body {
   .post_window {
     width: min(50vw, calc(100vw - (var(--calc-inside-main-s) + (var(--mrgs) * 2) + var(--left-side-min-s) + var(--right-side-min-s)) - 2px));
   }
+}
+
+.regular_link {
+  background-color: var(--bkgd-main)
 }
 
