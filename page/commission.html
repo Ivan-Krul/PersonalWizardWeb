@@ -2,267 +2,177 @@
 <html>
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../style/main.css">
-  <link rel="shortcut icon" href="../image/Favicons/Favicon 16x16.png" type="image/x-icon">
-  <link rel="icon" href="../image/Favicons/Favicon 32x32.png" sizes="32x32">
-  <title>Commissions in Character Register</title>
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  
+  <title>You asking for drawing??</title>
+  <link rel="stylesheet" href="commission.css">
 </head>
 
-<style>
-  img {
-    max-width: 400%;
-    text-align: left;
-    margin:10px;
-    border: 3px solid var(--text) !important;
-  }
-  
-  #select_pricing_choice {
-    font-size: var(--font);
-  }
-
-
-  /* 292 at 1902 */
-  td {
-    max-width: 15vw;
-  }
-  
-  td * {
-    text-align: center;
-  }
-  
-  tr:after {
-    clear: left;
-  }
-  
-  td img {
-    width: 90%;
-    vertical-align: middle;
-  }
-
-  .head_crop {
-    width: 256px !important;
-    height: 80px !important;
-    object-fit: cover;
-    object-position: 50% 20%;
-  }
-
-  .half_crop {
-    width: 256px !important;
-    height: 170px !important;
-    object-fit: cover;
-    object-position: 50% 25%;
-  }
-
-  .full_crop {
-    width: 256px;
-    height: 256px;
-  }
-  
-  .title_pad {
-    padding-right: calc(140px - calc(var(--font) * 16))
-  }
-  
-</style>
-
 <body>
-  <div id="sideMenu"></div>
-
-  <div id="content">
-    <h2>Commission page</h2>
-    <div>Here you can see how you can get my drawing up to 1 week.</div>
-    <div>
-      <div>Conditions to call out me:</div>
-      <ul>
-        <li>Writing to my <a style="background-color: lavender; color:black; border-radius: 5px; padding:4px" href="https://bsky.app/profile/kiwii-devulopir.bsky.social">bluesky account</a> direct message</li>
-        <li>Also writing to my discord account (I'm in my discord server in the link in my bsky profile)</li>
-        <li>Using google forms for shy people(soon)</li>
-      </ul>
+  <center>
+    <h2>You asking for a drawing commission!?</h2>
+  </center>
+  
+  <div class="main">
+      <div class="control_window attachment">
+      <a class="buttoned_link" href="./index.html">
+      <img class="img_in_menu_bar" src="./image/home.png"></a>
+      <a class="buttoned_link" href="./about.html">
+      <img class="img_in_menu_bar" src="./image/about.png"></a>
+      <a class="buttoned_link" href="./contacts.html">
+      <img class="img_in_menu_bar" src="./image/contacts.png"></a>
     </div>
-    <div>In these sheets, you're choosing commission plan:</div>
-    <select id="select_pricing_choice" value="simple">
-      <option value="simple">Simple sheet</option>
-      <option value="detail">Detail sheet</option>
-    </select>
-    <div id="simple_pricing_container">
-      <div style="border: 3px solid gray;">
+    
+    <div class="attachment infotext">
+      <center>
+        <h3>Terms and Details</h3>
+      </center>
       <div>
-        <table>
-        <tbody>
+        To contact me you can choose the related tab above.
+        To get a price of request, you can look at preferences, at which configuration I would draw down below.
+        There is an additional mode to choose precisely which configuration you want and copy and paste the request when you contacting me (I will understand what it says).
+        You choose at which option you can pay, you can pay immediately, or you can pay partially, 50% in line art, 50% at rest of the drawing.
+        In case you are lacking of money or you have no access to payment systems, you can contribute to my projects, or you can draw one of my characters, the main thing, this has to be generous and good quality.
+      </div>
+      <div>           
+        You can ask for the refund with full prise at line art stage and 50% at the rest of the stage.
+        If I did not not finish your request in the span of week, you would have an opportunity to request another drawing.
+        At the finish of drawing let me know would you post it somewhere and would you ping me in social medias.
+      </div>
+      <br/>
+      <div>
+        I draw stuff in simplified style, keeping detailing in low.
+        I preferably draw humanoids or furries. I would not make any animations.
+        I can draw landscapes, simple machines or some abstraction.
+        There is many things I can draw in basic level.
+      </div>
+      <div>      
+        I would not accept request that I can not creatively express in drawing.
+        I will not draw any suggestive things or many blood, even if it is for the sake of money.
+      </div>
+    </div>
+    <div class="attachment infotext">
+      Here are the prices for the pieces:
+      
+      <select id="select_pricing" selected="simple">
+        <option value="simple">Simple pricing sheet</option>
+        <option value="detailed">Detailed pricing form</option>
+      </select>
+      
+      <div id="none" style="display: none;" class="error">
+        Aw man, the loading was failed!
+      </div>
+      <div id="simple" style="display: none;">
+        <table class="price_attachment">
+        <tr><td class="req_title">Base costs</td></tr>
           <tr>
-          <td class="title_pad">Parts:</td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line).png"></td>
-          <td><table>
-            <tbody>
-            <tr><td style="padding-left: 25px; padding-top:25px; padding-bottom: 25px;">Head: <span id="head_cost_s"></span>€</td></tr>
-            <tr><td style="padding-left: 25px; padding-top:25px; padding-bottom: 25px;">Half-body: <span id="half_cost_s"></span>€</td></tr>
-            <tr><td style="padding-left: 25px; padding-top:25px; padding-bottom: 25px;">Full-body: <span id="full_cost_s"></span>€</td></tr>
-            </tbody>
-          </table></td>
+            <td><img class="img_in_req" src="./image/commission placeholders/com ph (L0001).png"></td>
+            <td>
+              <div>Head: <span id="s_base_head"></span>€</div>
+              <div>Half body: <span id="s_base_half"></span>€</div>
+              <div>Full body: <span id="s_base_full"></span>€</div>
+            </td>
           </tr>
-          <tr>
-          <td class="title_pad">Character style:</td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line + paint).png"><div>Paint: +<span id="paint_cost_s"></span>€</div></td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line + paint + shadow).png"><div>Paint + Shadow: +<span id="shadow_cost_s"></span>€</div></td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (lineless-paint).png"><div>Lineless paint: +<span id="llp_cost_s"></span>€</div></td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (lineless-paint + shadow).png"><div>Lineless paint + Shadow: +<span id="llpshadow_cost_s"></span>€</div></td>
-          </tr>
-          <tr>
-          <td class="title_pad">Backround style:</td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line + paint + shadow + abst).png"><div>Abstract: +<span id="abst_cost_s"></span>€</div></td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line + paint + shadow + actual).png"><div>Normal: +<span id="actual_cost_s"></span>€</div></td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line + paint + shadow + photo).png"><div>Photo: +<span id="photo_cost_s"></span>€</div></td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page (line + paint + shadow + detailed).png"><div>Detailed: +<span id="deltailed_cost_s"></span>€</div></td>
-          </tr>
-          <tr>
-          <td class="title_pad">Drawing style:</td>
-          <td><img src="../image/CommissionPlaceholders/Placeholder for commission page pixel-art (line + paint + shadow + actual).png" style="image-rendering: pixelated; width:100%; height: 100%;"><div>Pixel-art:</div><div>(half the results you got)</div><span id="pixlart_cost_s" style="display: none;"></span></td>
-          </tr>
-        </tbody>
         </table>
+        
+        <div class="price_attachment">
+          <div class="req_title">Style costs</div>
+          <div class="wrap_block">
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (LP001).png"></td></tr><tr class="req_sub_title"><td>Painted: +<span id="s_full_lp0"></span>€</td></tr></table>
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (LPS01).png"></td></tr><tr class="req_sub_title"><td>Painted and shaded: +<span id="s_full_lps"></span>€</td></tr></table>
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (0P001).png"></td></tr><tr class="req_sub_title"><td>Lineless with paint: +<span id="s_full_0p0"></span>€</td></tr></table>
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (0PS01).png"></td></tr><tr class="req_sub_title"><td>Lineless with paint and shade: +<span id="s_full_0ps"></span>€</td></tr></table>
+          </div>
+        </div>
+        
+        <div class="price_attachment">
+          <div class="req_title">Background costs</div>
+          <div class="wrap_block">
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (LPSA1).png"></td></tr><tr class="req_sub_title"><td>Abstraction: +<span id="s_full_lps_a"></span>€</td></tr></table>
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (LPSP1).png"></td></tr><tr class="req_sub_title"><td>Photo: +<span id="s_full_lps_p"></span>€</td></tr></table>
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (LPSM1).png"></td></tr><tr class="req_sub_title"><td>Simple background: +<span id="s_full_lps_m"></span>€</td></tr></table>
+            <table><tr><td><img class="img_in_req_sub" src="./image/commission placeholders/com ph (LPSH1).png"></td></tr><tr class="req_sub_title"><td>Complicated background: +<span id="s_full_lps_h"></span>€</td></tr></table>
+          </div>
+        </div>
+      
+        <div class="price_attachment">
+          <div class="req_title">Amount costs</div>
+          <div class="req_title">Only background: <span id="s_lps_m_only"></span>€</div>
+          <div class="req_title">Single character: +<span id="s_full_lps_m_one"></span>€</div>
+          <div class="req_title">Two and more characters each: +<span id="s_full_lps_m_more"></span>€</div>
+        </div>
+      
+        <div class="price_attachment">
+        <div class="req_title">Reference cost reduction (in case you have reference(s)): -<span id="s_full_lps_m_one_ref"></span>€</div>
+        </div>
+        
+        <div>Adding this up you will get your desired price</div>
       </div>
+      <div id="detailed" style="display: none;">
+        <table class="price_attachment">
+        <tr><td class="req_title">Custom preferences</td></tr>
+          <tr>
+            <td><img class="img_in_req" id="img_sample" src="./image/commission placeholders/com ph (L0001).png"></td>
+            <td>
+              <form>
+                <div>
+                  <div class="req_title">Crop:</div>
+                  <input type="radio" name="crop" id="d_crop_head" value="head" />
+                  <label for="d_crop_head">head</label>
+                  <input type="radio" name="crop" id="d_crop_half" value="half" />
+                  <label for="d_crop_half">half body</label>
+                  <input type="radio" name="crop" id="d_crop_full" value="full" checked />
+                  <label for="d_crop_full">full body</label>
+                </div>
+                
+                <div>
+                  <div class="req_title">With lines: <input type="checkbox" id="d_detail_line" checked /></div>
+                  <div class="req_title">With paint: <input type="checkbox" id="d_detail_paint" /></div>
+                  <div class="req_title">With shadows: <input type="checkbox" id="d_detail_shadow" /></div>
+                </div>
+                
+                <div>
+                  <div class="req_title">Background:</div>
+                  
+                  <div>
+                  <input type="radio" name="background" id="d_background_blank" value="0" checked />
+                  <label for="d_background_blank">Blank</label></div>
+                  <div>
+                  <input type="radio" name="background" id="d_background_abstract" value="A" />
+                  <label for="d_background_abstract">Abstract</label></div>
+                  <div>
+                  <input type="radio" name="background" id="d_background_photo" value="P" />
+                  <label for="d_background_photo">Photo</label></div>
+                  <div>
+                  <input type="radio" name="background" id="d_background_basic" value="M" />
+                  <label for="d_background_basic">Basic background</label></div>
+                  <div>
+                  <input type="radio" name="background" id="d_background_advanced" value="H" />
+                  <label for="d_background_advanced">Advanced background</label></div>
+                </div>
+                
+                <div>
+                  <div class="req_title">Amount of characters: <input type="number" id="d_count" value="1" max="9" min="0"></div>
+                </div>
+                
+                <div>
+                  <div class="req_title">With reference(s): <input type="checkbox" id="d_reference" checked /></div>
+                </div>
+              </form>
+            </td>
+          </tr>
+        </table>
+        
+        <div>Final price: <span id="d_final_price"></span>€</div>
       </div>
+      
     </div>
-    <div id="detail_pricing_container" style="display: none;">
-      <div style="border: 5px solid gray;">
-      <div>
-        <div>Crop (C): </div>
-        <div>
-          <input type="radio" name="crop" id="head">
-          <label for="head">head (<span id="head_cost"></span>)</label>
-          <input type="radio" name="crop" id="half">
-          <label for="half">half-body (<span id="half_cost"></span>)</label>
-          <input type="radio" name="crop" id="full" checked>
-          <label for="full">full-body (<span id="full_cost"></span>)</label>
-        </div>
-        <br>
-        <div>
-          <div>Detail (D): </div>
-          <div>
-          <input type="radio" name="detail" id="line" checked>
-          <label for="line">line (<span id="line_cost"></span>)</label>
-          </div>
-          <div>
-          <input type="radio" name="detail" id="paint_line">
-          <label for="paint_line">line + paint (<span id="paint_line_cost"></span>)</label>
-          </div>
-          <div>
-          <input type="radio" name="detail" id="shadow_paint_line">
-          <label for="shadow_paint_line">line + paint + shadow/light (<span id="shadow_paint_line_cost"></span>)</label>
-          </div>
-          <div>
-          <input type="radio" name="detail" id="shadow_line">
-          <label for="shadow_line">line + shadow/light (<span id="shadow_line_cost"></span>)</label>
-          </div>
-          <div>
-          <input type="radio" name="detail" id="lineless_paint">
-          <label for="lineless_paint">lineless-paint (<span id="lineless_paint_cost"></span>)</label>
-          </div>
-          <div>
-          <input type="radio" name="detail" id="shadow_lineless_paint">
-          <label for="shadow_lineless_paint">lineless-paint shadow/light (<span
-            id="shadow_lineless_paint_cost"></span>)</label>
-          </div>
-        </div>
-        <br>
-        <div>
-          <div>Count characters(N): </div>
-          <input type="number" min="0" value="1" step="1" id="count" style="width: 5ch;">
-          <label for="count">Count of character to be drawn <div>(for 0: <span id="0_count_cost"></span>, for
-            1: <span id="1_count_cost"></span>, for additional: *(<span id="1_count_cost"></span>+<span
-            id="2+_count_cost"></span>)</div>
-          </label>
-        </div>
-        <br>
-        <div>
-          <div>Background(B): </div>
-          <input type="radio" name="background" id="blank" checked>
-          <label for="blank">blank (<span id="blank_cost"></span>)</label>
-          <input type="radio" name="background" id="abstract">
-          <label for="abstract">abstract (<span id="abstract_cost"></span>)</label>
-          <input type="radio" name="background" id="actual">
-          <label for="actual">actual (<span id="actual_cost"></span>)</label>
-          <input type="radio" name="background" id="photo">
-          <label for="photo">photo (<span id="photo_cost"></span>)</label>
-          <input type="radio" name="background" id="detailed">
-          <label for="detailed">detailed (<span id="detailed_cost"></span>)</label>
-        </div>
-        <br>
-        <div>
-          <div>Style(S): </div>
-          <input type="radio" name="style" id="original" checked>
-          <label for="original">original (<span id="original_cost"></span>)</label>
-          <input type="radio" name="style" id="pixel-art">
-          <label for="pixel-art">pixel-art (<span id="pixel-art_cost"></span>)</label>
-          <input type="radio" name="style" id="others">
-          <label for="others">others (<span id="others_cost"></span>)</label>
-        </div>
-        <br>
-        <div>
-          <div>Reference(R): </div>
-          <input type="checkbox" id="ref">
-          <label for="ref">with any provided reference(-<span id="ref_cost"></span>)</label>
-        </div>
-        </div>
-        <div>
-        <img id="placeholder" class="full_crop">
-        </div>
-        <div>Global price multiplier (G): <span id="global_cost"></span></div>
-        <div>Base price (A): <span id="base_cost"></span></div>
-        <br>
-        <div>Price: <code>( C * D * N * B * S + R ) * G + A</code></div>
-        <div>Price:
-        <code>( <span id="C_eq"></span> * <span id="D_eq"></span> * <span id="N_eq"></span> * <span id="B_eq"></span> * <span id="S_eq"></span> - <span id="R_eq"></span> ) * <span id="G_eq"></span> + <span id="A_eq"></span></code>
-        </div>
-        <div>Price: <span id="price_counter"></span></div>
-        <button id="copy_stats_to_clipboard">Copy plan into clipboard</button>
-      </div>
-
-    </div>
-    <div>After choosing one, you click "save plan into clipboard", and paste it to me.</div>
-    <div>
-      Right now you can pay using:
-      <ul>
-        <li>PayPal</li>
-        <li>Ko-Fi</li>
-        <li>Steam gift card, depending on your region</li>
-        <li>Steam games as a present</li>
-      </ul>
-      If you're lacking of money, or you can't get access to payment system, you can make a contribution to my
-      active GitHub projects using "pull requests"(I accept good code, so you can ask me is it valid), or draw as
-      best as you can drawings of my characters(don't try ai, it has to be yours and high quality), or befriend
-      with me(hours chatting with me isn't meaning we're friends).
-    </div>
-    <div>
-      You can pay full prise before even drawing or you can pay half of the prize for sketch and another half for the rest of the process.
-      You can ask for refund in any stage of drawing full prise, but you can recieve the part of refund when the complex drawing was at end stage
-    </div>
-    <div>
-      What I draw:
-      <ul>
-        <li>Furries/Animals</li>
-        <li>Small simple animations</li>
-        <li>Landscape(in my style)</li>
-        <li>Machines(simple)</li>
-        <li>Abstraction(randomly)</li>
-        <li>(anything not included here are in following list, but not written)</li>
-      </ul>
-      What I CAN'T draw:
-      <ul>
-        <li>Suggestive(feeling awkward to draw this)</li>
-        <li>Blood(if it's not too much)</li>
-      </ul>
-    </div>
-    <div>
-      Also a couple of details:
-      <dir>
-      <li>I can post your art in a certain platforms I'm accesible new and mention you in your wish OR you can post it with my mention and link to certain platform I'm accesible</li>
-      </dir>
-    </div>
-    <div>After that, for a day, or for a week(more than a week after payment you can ask about another drawing as free), you're getting a drawing from me. Lastly, don't forget to mention me in case of publishing my work.</div>
   </div>
-  <script type="module" src="../js/commission.js"></script>
+  
+  <script src="commission.js"></script>
 </body>
 
 </html>
+  

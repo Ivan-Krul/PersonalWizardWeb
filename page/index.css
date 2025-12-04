@@ -3,9 +3,9 @@
 body {
   color: var(--text);
   background-image: url("./image/bg.gif");
-  background-size: cover;
-  background-position:center;
-  background-rendering: pixelated;
+  /*background-size: cover;*/
+  /*background-position:center;*/
+  /*background-rendering: pixelated;*/
   /*background-color: var(--bkgd-main);*/
   margin: var(--default-body-margin);
 }
@@ -59,6 +59,10 @@ body {
 
 .img_in_main {}
 
+.stefan_page {
+  image-rendering: pixelated;
+}
+
 @media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   img {
     max-width: 100%;
@@ -88,7 +92,6 @@ body {
     min-width: calc(100% - (var(--pads) * 2));
     margin-top: var(--mrgs);
   }
-  
 }
 
 
@@ -101,6 +104,10 @@ body {
   .right {
     min-width: var(--right-side-min-s);
     margin-left: var(--mrgs);
+  }
+  
+  .stefan_page {
+    transform: translate(-450px, -100px) scaleX(-1) scale(0.6);
   }
 }
 
@@ -144,4 +151,4 @@ body {
 .regular_link {
   background-color: var(--bkgd-main)
 }
-
+  

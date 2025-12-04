@@ -1,1 +1,1 @@
-ffmpeg -i $path -vf scale="iw/5:ih/5" ($path -replace "\..*", ".gif")
+ffmpeg -i $path -vf 'scale="iw/5:ih/5",setpts=0.25*PTS' ($path -replace "\..*", ".gif")
