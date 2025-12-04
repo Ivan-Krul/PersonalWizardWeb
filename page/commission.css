@@ -1,0 +1,79 @@
+@import url("base.css");
+
+body {
+  color: var(--text);
+  background-color: var(--bkgd-comis);
+}
+
+.img_in_tabl {
+  padding: 0;
+  padding-left: var(--pads);
+  padding-right: var(--pads);
+}
+
+.img_in_menu_bar {
+  image-rendering: pixelated;
+}
+
+.img_in_menu_bar:hover {
+  filter: invert(100%);
+}
+
+.main {
+  background-color: var(--abot-bkgd-c);
+  border: var(--brds) dashed var(--abot-border-c);
+  padding: var(--pads);
+}
+
+.attachment {
+  border: var(--brds) dotted var(--abot-border-attachment);
+}
+
+.main * {
+  /*border: 5px solid black;*/
+}
+
+.icons {
+  vertical-align: middle;
+  padding: calc(var(--pads) / 2);
+}
+  
+.infotext {
+  padding: 5px;
+}
+  
+.req_title {
+  margin-top: var(--img-padding);
+  padding-left: var(--img-padding);
+}
+  
+.img_in_req {
+  max-width: calc(100vw - var(--calc-inside-main-s) - 10ch);
+}
+
+.img_in_req_sub {
+  max-width: calc(100vw - var(--calc-inside-main-s) - 20px);
+}
+  
+.req_sub_title {
+  text-align: center;
+}
+  
+.wrap_block {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.price_attachment {
+  background-color: var(--bkgd-comis);
+  border: var(--brds) dotted #eed610;
+}
+  
+@media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
+}
+
+@media screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
+  .img_in_tabl {
+    width: min(50vw, 100%);
+  }
+}
