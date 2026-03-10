@@ -1,0 +1,19 @@
+
+@font-face {
+	font-family: "Uniform";
+	src: url("./fonts/unifont-17.0.03.otf");
+}
+
+* {
+	background-color: #000;
+	color: #fff;
+	font-family: "Uniform";
+}
+
+.back_link {
+	color: #fff;
+}
+
+.back_link:visited {
+	color: #fff;
+}
