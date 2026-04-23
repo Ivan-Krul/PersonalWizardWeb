@@ -44,10 +44,21 @@ body {
 
 .gamelib_table tr td {
   border: var(--brds) dashed black;
+  padding: 5px;
 }
 
 .gamelib_table tr td:hover {
   border: var(--brds) dashed white;
+  padding: 5px;
+}
+
+.gamelib_table tr td * {
+  padding: 0;
+}
+
+.gamelib_table tr td * img {
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .current_projects {
