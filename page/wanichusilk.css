@@ -17,3 +17,7 @@
 .back_link:visited {
 	color: #fff;
 }
+
+.img {
+    max-width: calc(100vw - 16px);
+}

@@ -37,6 +37,10 @@ body {
   opacity: 0.5;
 }
 
+.preview {
+  max-width: calc(100vw - (var(--mrgs) + var(--brds) * 2 + var(--pads) + var(--img-padding)) * 2 - 8px);
+}
+
 .icons {
   vertical-align: middle;
   padding: calc(var(--pads) / 2);
