@@ -10,6 +10,9 @@ body {
   margin: var(--default-body-margin);
 }
 
+.title {
+}
+
 .main {
   background-color: var(--main-bkgd-c);
   border: var(--brds) dashed var(--main-border-c);
@@ -61,6 +64,7 @@ body {
 
 .stefan_page {
   image-rendering: pixelated;
+  max-width: calc(100vw - var(--default-body-margin));
 }
 
 @media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
@@ -103,6 +107,7 @@ body {
   
   .right {
     min-width: var(--right-side-min-s);
+    width: var(--right-side-min-s);
     margin-left: var(--mrgs);
   }
   
@@ -123,16 +128,16 @@ body {
   padding-left: var(--pads);
   padding-right: var(--pads);
   min-width: 100px;
-  min-height: 100px;
+  /*min-height: 100px;*/
   
-  height: 50vh;
+  /*height: 50vh;*/
   
   
 }
 
 .post_iframe {
   border: none;
-  height: calc(100% - 50px);
+  /*height: calc(100% - 50px);*/
   width: 100%;
 }
 
@@ -144,11 +149,23 @@ body {
 
 @media not screen and ((max-aspect-ratio: 1.2/1) or (max-width: 800px) or (max-height: 600px)) {
   .post_window {
-    width: min(50vw, calc(100vw - (var(--calc-inside-main-s) + (var(--mrgs) * 2) + var(--left-side-min-s) + var(--right-side-min-s)) - 2px));
+    width: min(50vw, calc(
+                       100vw
+                       - (
+                         var(--calc-inside-main-s)
+                         + (var(--mrgs) * 2)
+                         + var(--left-side-min-s)
+                         + var(--right-side-min-s))
+                       - 2px)
+    );
   }
 }
 
 .regular_link {
   background-color: var(--bkgd-main)
 }
-  
+
+.button_attachment {
+  padding: var(--pads);
+}
+

@@ -1,13 +1,13 @@
 
 @font-face {
-	font-family: "Uniform";
-	src: url("./fonts/unifont-17.0.03.otf");
+	font-family: "VGA";
+	src: url("./fonts/web_ibm_model30r0.woff");
 }
 
 * {
 	background-color: #000;
 	color: #fff;
-	font-family: "Uniform";
+	font-family: "VGA";
 }
 
 .back_link {

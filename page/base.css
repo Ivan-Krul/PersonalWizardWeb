@@ -1,7 +1,6 @@
 :root {
   --text: #ffffff;
   --bkgd-main: rgba(33, 33, 43, 0.5);
-  /*--bkgd-main: #21212b;*/
   --bkgd-about: #1a5f6a;
   --bkgd-contc: #f4b461;
   --bkgd-comis: #eec110;
@@ -29,6 +28,12 @@
 @font-face {
   font-family: "Rubik";
   src: url("./fonts/Rubik-Regular.ttf");
+}
+
+@media only screen and (min-width: 3000px) {
+  html {
+    /*zoom: 200%;*/
+  }
 }
 
 * {
