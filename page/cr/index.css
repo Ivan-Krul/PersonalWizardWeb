@@ -1,0 +1,9 @@
+@import url("base.css");
+
+body {
+  color: white;
+  background-image: url("./mind.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}

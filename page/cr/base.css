@@ -1,0 +1,39 @@
+
+:root {
+  --mindcolor: #7b48ac;
+}
+
+.navigator {
+  /*display: flex;
+  flex-direction: row;*/
+  padding-bottom: 5px;
+  overflow-x: scroll;
+  /*justify-content: left;
+  scrollbar-gutter: stable;
+  scrollbar-color: white var(--mindcolor);
+  scrollbar-width: thin;*/
+  background-color: rgba(123,72,172,0.4);
+}
+
+.nav_entry {
+  --nav-entry-padding: 5px;
+  padding: var(--nav-entry-padding);
+  image-rendering: pixelated;
+  color: #fff;
+}
+
+.nav_entry:visited {
+  color: #fff;
+}
+
+.goback {
+}
+
+.goback:hover {
+  filter: invert(100%);
+}
+
+.main_stuff {
+  --main-padding: 10px;
+  padding: var(--main-padding);
+}
