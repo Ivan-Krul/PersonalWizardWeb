@@ -169,3 +169,7 @@ body {
   padding: var(--pads);
 }
 
+.button_link {
+  padding: 1px;
+}
+
