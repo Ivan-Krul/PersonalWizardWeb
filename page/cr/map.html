@@ -16,23 +16,64 @@
   </center></header>
   <nav class="navigator">
     <a class="nav_entry goback" href="../"><img alt="Go Back" title="Go Back" src="../image/home.png"></a>
-    <a class="nav_entry" href="./"><img alt="Map" title="Map" src="./nav/map.png"></a>
+    <a class="nav_entry selected" href="./"><img alt="To CharacterRegister main page" title="To CharacterRegister main page" src="./nav/map.png"></a>
     <a class="nav_entry" href="../">Somewhere somewhere</a>
     <a class="nav_entry" href="../">Somewhere somewhere</a>
     <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-    <a class="nav_entry" href="../">Somewhere somewhere</a>
-
   </nav>
   <main class="main_stuff">
-    <img class="map" src="./map/mind.png">
-    <div class="sidemap">
-      
+    <div class="map_container">
+      <div class="map">
+        <img src="./map/mind.png" usemap="#mapofmind">
+        <map name="mapofmind">
+            <area shape="circle"
+                  coords="0,0,100"
+                  href="./esc.html"
+                  title="ESC"
+            />
+            <area shape="poly"
+                  coords="1199,300,999,300,999,450,1080,500,1199,500"
+                  href="#"
+                  title="Life"
+            />
+            <area shape="poly"             
+                  coords="998,299,1001,299,1001,0,101,0,90,47,68,75,43,91,0,101,0,1199,1101,1199,1101,559,1199,599,1199,501,1080,501,998,449"
+                  href="./cont_3.html"
+                  title="Continent#3"
+            />
+        </map>
+      </div>
+      <div class="sidemap">
+        Mouse over the map to look at countries. Scroll down for more information about the world overall.
+        (North is top on the map)
+      </div>
+    </div>
+    <div>
+      <p>
+        There is a lot of islands, archipelagos and continents.
+        Islands are small patches of land. They can reach 15km² at least.
+        They can erode out.
+        It was thought, islands float, but yet there is no confirmation to that.
+      </p>
+      <p>
+        Continents are big islands.
+        They experience erotion and breaking into islands or archipelago.
+        Currently there is detected 5 islands, last 3 of them are visible.
+        First 2 of them were located around ESC, 1st is located on east of ESC nearby,
+        2nd is located on south east of ESC nearby and it was bigger in comparasion to 1st continent.
+      </p>
+      <p>
+        On islands there are cities.
+        They are contrentration points, where most of services and handlers are clusterised.
+        Their size reach up to 5km in radius.
+        They all have <a href="./list_of_cities.txt">names</a>, what reflect history or culture of the city.
+      </p>
+      <p>
+        Between islands surround void.
+      </p>
+      <p>
+        Around all that goes the Essence, it lits everything over the islands and doesn't under them.
+      </p>
     </div>
   </main>
 </body>

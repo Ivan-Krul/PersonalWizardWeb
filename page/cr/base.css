@@ -26,6 +26,10 @@
   color: #fff;
 }
 
+.selected {
+  filter: invert(100%);
+}
+
 .goback {
 }
 
