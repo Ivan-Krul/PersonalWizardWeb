@@ -1,0 +1,19 @@
+@import url("base.css");
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.table_inventory {
+  max-width: 720px;
+}
+
+.table_inventory tr {
+  margin-top: 10px;
+  vertical-align: top;
+}
+
+.table_inventory tr td img {
+  width: min(260px, 50vw);
+}
