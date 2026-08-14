@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="esc.css">
+  <link rel="stylesheet" href="reader.css">
   <link rel="shortcut icon" href="./favicon_fieldtree.ico" type="image/x-icon">
-  <title>ESC</title>
+  <title>Library reader...</title>
 </head>
 
 <body>
   <header><center>
-    <h2>ESC</h2>
+    <h2>Library reader</h2>
   </center></header>
   <nav class="navigator">
     <a class="nav_entry goback" href="../"><img alt="Go Back" title="Go Back" src="../image/home.png"></a>
@@ -22,20 +22,33 @@
     <a class="nav_entry" href="../">Somewhere somewhere</a>
   </nav>
   <main class="main_stuff">
-    <div class="map_container">
-      <div class="map">
-        <img src="./map/ESC secret shot.png">
+    <noscript>
+      Reader requires enabled JavaScript
+    </noscript>
+    <center>
+      <div id="title"></div>
+      <img id="viewer" />
+      <div>
+        <button id="btn_tofirst"><<</button>
+        <button id="btn_toprev">|<</button>
+        <span>
+          <input type="number" id="inpnum_goto" value="0" min="0"/>
+          <button id="btn_goto">goto</button>
+        </span>
+        <button id="btn_tonext">>|</button>
+        <button id="btn_tolast">>></button>
       </div>
-      <div class="sidemap">
-        ESC is the first formed country in Mind.
-        It stays under neutrality and has no political goal.
-        It contains research facilities and their team, that provides for whole Mind all basic necessity.
-	    Suppress waves, serving "Global signal" and handling container links are common tasks for ESC.
-	    They have a full access to "Global External Reality".
-        In this world it was set, it has a holy will, that handle everything, and for that, south to ESC islands are guaranting defense.
-      </div>
+    </center>
+    <div>
+      <div>First page was published in <span id="date_first"></div>
+      <div>Latest page was published in <span id="date_latest"></div>
+      <div>Pages in total: <span id="page_count"></div>
+      <div id="about"></div>
+      <div><a id="goto_first">Go to first page</a></div>
     </div>
   </main>
+
+  <script src="./reader.js"></script>
 </body>
 
 </html>

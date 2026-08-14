@@ -1,0 +1,34 @@
+@import url("base.css");
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.table_content {
+  max-width: 720px;
+  border-width: 1px;
+  border-style: dashed;
+  border-color: white;
+}
+
+.table_content tr {
+  height: 200px;
+}
+
+.table_content tr td {
+  padding: 0;
+  width: 200px;
+}
+
+.table_content tr td a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.table_content tr td a img {
+  width: 100%;
+  height: calc(200px - 28px);
+}
