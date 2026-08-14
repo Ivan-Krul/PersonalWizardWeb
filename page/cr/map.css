@@ -5,8 +5,12 @@ body {
   color: #fff;
 }
 
+.navigator {
+  max-width: 100%;
+}
+
 .map {
-  width: calc(100% - 10px);
+  max-width: 100%;
   image-rendering: auto;
 }
 

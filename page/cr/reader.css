@@ -5,6 +5,10 @@ body {
   color: #fff;
 }
 
+#viewer {
+  width: 100%;
+}
+
 .main_stuff {
   margin-top: 5px;
   border-style: solid;
