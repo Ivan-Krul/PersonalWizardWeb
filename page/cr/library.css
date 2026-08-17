@@ -31,4 +31,5 @@ body {
 .table_content tr td a img {
   width: 100%;
   height: calc(200px - 28px);
+  object-fit: cover;
 }
