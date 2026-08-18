@@ -33,3 +33,11 @@ body {
   height: calc(200px - 28px);
   object-fit: cover;
 }
+
+.table_content tr td a div {
+  color: white;
+}
+
+.table_content tr td a div:active {
+  color: white;
+}

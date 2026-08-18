@@ -1,0 +1,53 @@
+
+:root {
+  --mindcolor: #7b48ac;
+}
+
+.header {
+  font-size: bold;
+}
+
+.goback {
+  background-color: var(--mindcolor);
+  color: white;
+  text-align: center;
+}
+
+.goback a:visited {
+  color: white;
+}
+
+.main_stuff {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.profile_wnd {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile_wnd img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.stat_wnd {
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px dashed black;
+  max-width: 500px;
+  margin-left: 10px;
+}
+
+dir {
+  margin: 0;
+}
+
+.story_wnd p {
+  border: 1px dotted black;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
