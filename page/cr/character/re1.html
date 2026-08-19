@@ -1,1 +1,74 @@
-<center style="background-color: red; color: white;"><h1>The profile is in progress!</h1></center>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="shortcut icon" href="./favicon_fieldtree.ico" type="image/x-icon">
+  <title>Re1-Cont3 - Character Register</title>
+</head>
+
+<style>
+
+body {
+  background-color: #19171e;
+  color: #fff;
+}
+.stat_wnd {
+  background-color: #c4a6dc;
+  color: #000;
+}
+.story_wnd * {
+  background-color: #c4a6dc;
+  color: #000;
+}
+
+</style>
+
+<body>
+  <a href="../characters.html"><div class="goback">&larr; Go back</div></a>
+  <main class="main_stuff">
+    <header class="header"><h2>Re1-Cont3</h2></header>
+
+    <div class="profile_wnd">
+      <img class="prof_img" src="../gallery/re1-cont3/Re1-Cont3.png">
+
+      <div class="stat_wnd">
+        <div>Species: Fully modified machine</div>
+        <div>Age: <span id="age"><noscript>Not (disabled javascript)</noscript></span></div>
+        <div>Date creation: 16.12.2024(13.11.18M)</div>
+        <!--<div>Date disappearence:</div>-->
+        <div>Country of registration: <a href="../cont_3.html">Continent #3</a></div>
+        <div>Work: Maintainer of float fighters in Continent #3</div>
+      </div>
+    </div>
+    <div>No stories</div>
+    <div class="story_wnd">
+    </div>
+  </main>
+  <script>
+function extractAge(initialAge, strDateCreation) {
+  if (strDateCreation === null) {
+    return initialAge;
+  }
+  const today = new Date();
+  let diffc = today - new Date(strDateCreation);
+
+  return initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24);
+}
+
+function convertDateToString(date = new Date(), isMind = false) {
+  return `${date.getDate()}.${date.getMonth()+1}.${isMind ? date.getFullYear() - 2000 :date.getFullYear()}${isMind?"M":""}`;
+}
+
+function convertDateToStringFull(date = new Date()) {
+  return `${convertDateToString(date,false)}(${convertDateToString(mind.getMindDate(date),true)})`;
+}
+
+  document.getElementById("age").innerText = extractAge(0, "16 Nov 2024");
+  </script>
+</body>
+
+</html>

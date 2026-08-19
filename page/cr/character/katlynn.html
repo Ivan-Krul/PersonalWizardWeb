@@ -1,1 +1,112 @@
-<center style="background-color: red; color: white;"><h1>The profile is in progress!</h1></center>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="shortcut icon" href="./favicon_fieldtree.ico" type="image/x-icon">
+  <title>Katlynn - Character Register</title>
+</head>
+
+<style>
+
+body {
+  background-color: #645045;
+}
+.stat_wnd {
+  background-color: #cfb59c;
+}
+.story_wnd * {
+  background-color: #cfb59c;
+}
+
+</style>
+
+<body>
+  <a href="../characters.html"><div class="goback">&larr; Go back</div></a>
+  <main class="main_stuff">
+    <header class="header"><h2>Katlynn (Anomal)</h2></header>
+
+    <div class="profile_wnd">
+      <img class="prof_img" src="../gallery/katlynn/Katlynn (cropped).png">
+
+      <div class="stat_wnd">
+        <div>Species: Ferret</div>
+        <div>Age: <span id="age"><noscript>Not (disabled javascript)</noscript></span></div>
+        <div>Sex: Female</div>
+        <div>Orientation: (hetero)</div>
+        <div>Traits:</div>
+        <dir>
+          <div>Empathetic</div>
+          <div>Independant</div>
+          <div>Perfectionist</div>
+          <div>Resentful</div>
+        </dir>
+        <div>Date creation: 2.1.2025(30.11.18M)</div>
+        <!--<div>Date disappearence:</div>-->
+        <div>Country of registration: <a href="../esc.html">ESC</a></div>
+        <div>Interests:</div>
+        <dir>
+          <div>fishing</div>
+          <div>gardening</div>
+          <div>dna analytic</div>
+        </dir>
+        <div>Work: Retired</div>
+        <div>Note: [This original character is multidimentional with the world of <a href="https://bsky.app/profile/scriptpostum.neocities.org" target="_blank">ScriptPostum</a>]</div>
+      </div>
+    </div>
+    <div>Stories</div>
+    <div class="story_wnd">
+      <p>
+        - "It was requested to give Katlynn a shot."<br />
+- "Okei mate"<br />
+<br />
+Katlynn appeared in the weird world, as she thought. She was nearby Erot. She was looking around like it’s a new world to explore. Out of curiosity, she recited words:<br />
+<br />
+"Увійди у світ той,<br />
+там де глиби, там де землі,<br />
+де шторми або пустелі<br />
+панують над всіма."<br />
+<br />
+Then, she "disappeared"
+      </p>
+      <p>
+        Katlynn got to the Mind again to discover it more. She thought about discovering it, so she ate dinner before the trip. She frequently asked herself, is it safer than her world and how it was made. She was seeing purple soil and the sun. Ugly purple soil. Katlynn thought to wander more around. She would know when to go back to her hellish environment or keep wandering.<br />
+<br />
+She climbed on a hill nearby and saw a yellow soil and some yellow boxes there. “Is it the city? I can finally ask what was going on”. On her way to the yellow city [Eros], Katlynn spotted a round building. It differs from the rest of the buildings. There is a security team. They looked like humans, but more distorted and purple. They wore hats with a symbol. Katlynn decided to ask them for some help. The guards got concerned about the ferret approaching them. They decided to get their SK-1418 ready and they screamed to Katlynn to get away from the building, because around it was forbidden trespassing. Katlynn stopped approaching them, knowing the fate if she wouldn’t listen. She screamed for help to get into the Mind. Guards weren't that interested in her help, but they suggested going to Eros. Katlynn guessed that in the city she would get help.<br />
+<br />
+Coming to the way, she started to spot some details around. Those yellow buildings look like containers, sometimes with door pathways. The yellow ground seems to be a path or toxication from containers. They look disgusting and dangerous for her. Well, Katlynn was close to the yellow soil, and decided to experiment on herself and her luck. Katlynn touched the soil and it seemed like it was hurtless. She thought she would get a burn on her skin but no. That was stupid of her. She decided to have a proper sleep.<br />
+<br />
+Katlynn had a plan to book a room in a hotel and then payout somehow. She was looking for a hotel, when she asked purple-strangers. It turned out, they didn’t know about the meaning of hotel. No matter how much she explained and asked about the location of the nearest hotel, she got no luck. Then, Katlynn decided to hide between buildings to have a rest. With that, she fell asleep.
+      </p>
+      <p>
+        Katlynn got adopted from purple unitman called Jakob. It told about some plans for a grand event, because Katlynn told for it about her world. It at first was shocked, but then it was fascinated with the new world. When it was resting, Katlynn decided to go back to her world... <a href="../reader.html?title=(1)">{in comix}</a>
+      </p>
+    </div>
+  </main>
+  <script>
+function extractAge(initialAge, strDateCreation) {
+  if (strDateCreation === null) {
+    return initialAge;
+  }
+  const today = new Date();
+  let diffc = today - new Date(strDateCreation);
+
+  return initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24);
+}
+
+function convertDateToString(date = new Date(), isMind = false) {
+  return `${date.getDate()}.${date.getMonth()+1}.${isMind ? date.getFullYear() - 2000 :date.getFullYear()}${isMind?"M":""}`;
+}
+
+function convertDateToStringFull(date = new Date()) {
+  return `${convertDateToString(date,false)}(${convertDateToString(mind.getMindDate(date),true)})`;
+}
+
+  document.getElementById("age").innerText = extractAge(55, "2 Jan 2025");
+  </script>
+</body>
+
+</html>

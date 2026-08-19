@@ -1,1 +1,78 @@
-<center style="background-color: red; color: white;"><h1>The profile is in progress!</h1></center>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="base.css">
+  <link rel="shortcut icon" href="./favicon_fieldtree.ico" type="image/x-icon">
+  <title>Nuzle - Character Register</title>
+</head>
+
+<style>
+
+body {
+  background-color: #6b7af4;
+}
+.stat_wnd {
+  background-color: #f4e56b;
+}
+.story_wnd * {
+  background-color: #f4e56b;
+}
+
+</style>
+
+<body>
+  <a href="../characters.html"><div class="goback">&larr; Go back</div></a>
+  <main class="main_stuff">
+    <header class="header"><h2>Nuzle</h2></header>
+
+    <div class="profile_wnd">
+      <img class="prof_img" src="../gallery/nuzle/Nuzle.png">
+
+      <div class="stat_wnd">
+        <div>Species: Bunny</div>
+        <div>Age: <span id="age"><noscript>Not (disabled javascript)</noscript></span></div>
+        <div>Sex: Female</div>
+        <div>Orientation: (lesbi)</div>
+        <div>Traits:</div>
+        <dir>
+          <div>Silly</div>
+        </dir>
+        <div>Date creation: 25.3.2024(20.2.18M)</div>
+        <!--<div>Date disappearence:</div>-->
+        <div>Country of registration: F.D</div>
+        <div>Interests:</div>
+        <div>Work:</div>
+      </div>
+    </div>
+    <div>No stories</div>
+    <div class="story_wnd">
+    </div>
+  </main>
+  <script>
+function extractAge(initialAge, strDateCreation) {
+  if (strDateCreation === null) {
+    return initialAge;
+  }
+  const today = new Date();
+  let diffc = today - new Date(strDateCreation);
+
+  return initialAge + parseInt(diffc / 1000 / 60 / 60 / 24 / 365.24);
+}
+
+function convertDateToString(date = new Date(), isMind = false) {
+  return `${date.getDate()}.${date.getMonth()+1}.${isMind ? date.getFullYear() - 2000 :date.getFullYear()}${isMind?"M":""}`;
+}
+
+function convertDateToStringFull(date = new Date()) {
+  return `${convertDateToString(date,false)}(${convertDateToString(mind.getMindDate(date),true)})`;
+}
+
+  document.getElementById("age").innerText = extractAge(17, "25 Mar 2024");
+  </script>
+</body>
+
+</html>
