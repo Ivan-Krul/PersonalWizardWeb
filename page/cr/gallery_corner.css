@@ -1,0 +1,22 @@
+@import url("base.css");
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.main_stuff {
+  margin: auto;
+}
+
+.main_stuff * {
+  margin: auto;
+  padding: 5px;
+  width: max(125px, 15%);
+}
+
+.main_stuff h3 {
+  text-align: center;
+  background-color: var(--mindcolor);
+}
+

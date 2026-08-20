@@ -1,0 +1,23 @@
+@import url("base.css");
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+.corner_wnd {
+  display: flex;
+  flex-direction: row;
+}
+
+.corner_wnd a {
+  color: #fff;
+  background-color: var(--mindcolor);
+  padding: 1em;
+  border: 1px solid black;
+  margin: auto;
+}
+
+.corner_wnd a:visited {
+  color: #fff;
+}
